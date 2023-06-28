@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Next Read</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+</head>
+
+<body style="background-color: #FFF6D2">
+
+    <nav class="navbar" style="background-color:#FF5733; align-items: center;">
+      
+        <a href=# class="navbar-brand" style="color:#FFF6D2; font-size:30px; ">📚NextRead</a> 
+        <ul class="nav navbar-nav">
+          <li><a href="/" style="color:black; font-size:20px; ">Home</a></li>
+          <li><a href="/recommend" style="color:black; font-size:20px; ">Recommend</a></li>
+          <li><a style="color:black; font-size:20px; ">Contact</a></li>
+        </ul>
+      
+    </nav>
+.
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 style="text-align:center; color:#ffa600">••• <b>SUPER 60</b> •••</h1>
+        </div>
+
+        {% for i in range(book_name | length) %}
+
+          <div class="col-md-3" style="margin-top:70px;">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img-top" src="{{image[i]}}">
+                <h4 style="margin-top:20px;"><b>{{ book_name[i] }}</b></h4>
+                <h5>{{ author[i] }}</h5>
+                <h5>Votes-{{ votes[i] }}</h5>
+                <h5>Ratings-{{ rating[i] }}</h5>
+              </div>
+
+            </div>
+          
+          </div>
+
+        {% endfor %}
+        
+      </div>
+
+    </div>
+
+</body>
+
+
+</html>
